@@ -1,0 +1,214 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* === Gaya Global untuk Semua Halaman === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6; /* Latar belakang abu-abu lembut */
+    color: #333;
+    margin: 0;
+    padding: 15px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #0056b3; /* Biru tua untuk judul */
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* === Header (header.html) === */
+.header-content {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-content h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2.2em;
+}
+.header-content p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* === Menu Navigasi (menu.html) === */
+.menu-nav {
+    text-align: center;
+    padding-top: 5px;
+}
+.menu-nav a {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 8px 18px;
+    margin: 0 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.menu-nav a:hover {
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+/* === Konten Utama (home.html, etc.) === */
+.content-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.content-card h2 {
+    text-align: left;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* === Sidebar (left.html & right.html) - PERBAIKAN === */
+.sidebar-box {
+    border: none;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    height: 95%;
+    display: flex; /* Mengaktifkan Flexbox untuk tata letak */
+    flex-direction: column; /* Menata item dari atas ke bawah */
+    align-items: center; /* Menengahkan semua item secara horizontal */
+}
+
+.sidebar-box legend {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #0056b3;
+    width: 100%; /* Memastikan lebar judul penuh */
+    text-align: center; /* Membuat teks judul di tengah */
+    border-bottom: 1px solid #eee; /* Garis pemisah tipis */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-box ul {
+    list-style-type: none; /* Menghilangkan bullet points */
+    padding: 0; /* Menghilangkan padding kiri default */
+    width: 100%; /* Memastikan list mengambil lebar penuh */
+}
+
+.sidebar-box ul li {
+    padding: 8px 5px;
+    text-align: center; /* Menengahkan teks link */
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-box ul li:hover {
+    background-color: #f0f5fa; /* Efek hover saat kursor di atas link */
+}
+
+/* === Tabel Pendidikan (study.html) === */
+.study-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.study-table th, .study-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+.study-table th {
+    background-color: #007bff;
+    color: white;
+}
+.study-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.study-table td:last-child {
+    text-align: center;
+}
+
+/* === Galeri Gambar (gallery.html) === */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.gallery-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.gallery-container hr {
+    display: none; /* Sembunyikan garis dan marquee */
+}
+.gallery-container marquee {
+    display: none; /* Sembunyikan garis dan marquee */
+}
+
+
+/* === Footer (footer.html) === */
+.footer-text {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    padding-top: 10px;
+}
+
+/* === Animasi Galeri Bergerak (Tambahan) === */
+.scrolling-gallery {
+    margin-top: 25px;
+    overflow: hidden; /* Sembunyikan gambar yang keluar dari area */
+    background: #e9ecef; /* Latar belakang sedikit berbeda */
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+.scrolling-wrapper {
+    display: flex; /* Buat gambar berjajar horizontal */
+    width: max-content; /* Lebar kontainer sesuai total lebar gambar */
+    /* Terapkan animasi: nama, durasi, tipe, perulangan */
+    animation: scroll 30s linear infinite; 
+}
+
+.scrolling-wrapper:hover {
+    animation-play-state: paused; /* Jeda animasi saat kursor di atasnya */
+}
+
+.scrolling-wrapper img {
+    height: 120px; /* Ukuran khusus untuk gambar bergerak */
+    width: auto;
+    margin: 0 15px; /* Jarak antar gambar */
+}
+
+/* Mendefinisikan animasi 'scroll' */
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Mulai dari posisi awal */
+    }
+    100% {
+        /* Geser ke kiri sejauh setengah dari lebar total wrapper */
+        transform: translateX(-50%); 
+    }
+}
